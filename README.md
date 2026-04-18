@@ -90,3 +90,10 @@ El campo `estado` indica la situación de cada mesa:
 **Ejemplo de Mesa Faltante:**
 
 - **Mesa No. 087704**: Esta acta electoral NO aparece en el dataset extraído, a pesar de estar dentro del rango de búsqueda consultado (0-999,999).
+
+### Fuentes Combinadas
+
+Este dataset es el resultado de la combinación de dos fuentes de datos:
+
+1. **Extracción Directa de API ONPE**: Datos obtenidos mediante consulta iterativa a la API oficial
+2. **Dataset de PrimeInstitute**: Extraida por ellos mediante api de la ONPE
