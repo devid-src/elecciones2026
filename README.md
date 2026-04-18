@@ -1,0 +1,92 @@
+# Documentación del Dataset de Mesas de Votación - ONPE
+
+## 💚 Apoya este Proyecto
+
+Si esta investigación electoral te ha sido útil, considera hacer una donación voluntaria a través de Yape:
+
+<div align="center">
+<img src="yape.jpeg" alt="QR Yape - Donaciones" width="300" height="300">
+</div>
+
+**Paga aquí con Yape** - Cualquier aporte es bienvenido
+
+---
+
+## Descripción General
+
+Este dataset contiene información sobre **88,064 mesas de votación** disponibles en la API oficial de la Oficina Nacional de Procesos Electorales (ONPE) de Perú. El archivo `data_verificado.csv` consolida el registro completo de mesas electorales con sus resultados de votación.
+
+## Metodología de Extracción
+
+### Fuente de Datos
+
+- **Origen**: API oficial de la ONPE
+- **Endpoint**: Consulta de mesas electorales
+- **Tipo de Extracción**: Consulta por rango de IDs
+
+### Proceso de Recopilación
+
+- **Rango de Búsqueda**: 0 a 999,999
+- **Total de Registros Obtenidos**: 88,064 mesas
+- **Método**: Iteración secuencial a través de identificadores únicos
+
+## Estructura del Dataset
+
+### Columnas del CSV
+
+| Campo          | Tipo   | Descripción                                      |
+| -------------- | ------ | ------------------------------------------------ |
+| `mesa`         | Entero | Identificador único de la mesa electoral         |
+| `departamento` | Texto  | Departamento donde se ubica la mesa              |
+| `provincia`    | Texto  | Provincia del departamento                       |
+| `distrito`     | Texto  | Distrito específico                              |
+| `local`        | Texto  | Institución educativa o local de votación        |
+| `electores`    | Entero | Cantidad de electores habilitados para votar     |
+| `emitidos`     | Entero | Total de votos emitidos en la mesa               |
+| `validos`      | Entero | Total de votos válidos (excluye blancos y nulos) |
+| `Keiko`        | Entero | Votos obtenidos por Keiko Fujimori               |
+| `Sanchez`      | Entero | Votos obtenidos por Pedro Castillo Terrones      |
+| `Aliaga`       | Entero | Votos obtenidos por Luis Aliaga                  |
+| `Nieto`        | Entero | Votos obtenidos por Óscar Nieto                  |
+| `Belmon`       | Entero | Votos obtenidos por Rodrigo Belmont              |
+| `Alvares`      | Entero | Votos obtenidos por Hernando de Alvares Thorne   |
+| `Lopez Chau`   | Entero | Votos obtenidos por Juan López Chau              |
+| `blancos`      | Entero | Votos en blanco                                  |
+| `nulos`        | Entero | Votos nulos o anulados                           |
+| `estado`       | Texto  | Estado de la mesa (ej: "Contabilizada")          |
+
+## Características del Dataset
+
+### Cobertura Geográfica
+
+- **Alcance**: Total
+- **División Administrativa**: Estructura de Departamentos, Provincias y Distritos
+- **Locales**: Incluye todas las instituciones educativas habilitadas como centros de votación
+
+### Información Electoral
+
+- **Candidatos**: Se incluyen 7 candidatos presidenciales principales
+- **Votos**: Se registran categorías de votos válidos, blancos y nulos
+- **Participación**: Se documenta la participación electoral por mesa
+
+### Estados de Procesamiento
+
+El campo `estado` indica la situación de cada mesa:
+
+- **Contabilizada**: Mesa con resultados finales procesados
+
+## Discrepancia de Datos - Actas Faltantes
+
+⚠️ **NOTA IMPORTANTE**: Existe una discrepancia significativa entre los datos reportados y los disponibles en el sistema:
+
+- **Mesas Reportadas por ONPE**: 92,766
+- **Mesas Obtenidas del Dataset**: 88,064
+- **Diferencia**: **4,702 mesas faltantes** (5.07% del total reportado)
+
+### Preguntas Abiertas
+
+¿Dónde están el resto de actas electorales? ¿Por qué no figuran en el sistema disponibilizado por la ONPE?
+
+**Ejemplo de Mesa Faltante:**
+
+- **Mesa No. 087704**: Esta acta electoral NO aparece en el dataset extraído, a pesar de estar dentro del rango de búsqueda consultado (0-999,999).
