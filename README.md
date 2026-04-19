@@ -97,3 +97,9 @@ Este dataset es el resultado de la combinación de dos fuentes de datos:
 
 1. **Extracción Directa de API ONPE**: Datos obtenidos mediante consulta iterativa a la API oficial
 2. **Dataset de PrimeInstitute**: Extraida por ellos mediante api de la ONPE
+
+---
+
+## Contacto
+
+Para consultas, sugerencias o reportar errores, contáctate a: **devid_src@proton.me**
