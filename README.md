@@ -80,12 +80,14 @@ El campo `estado` indica la situación de cada mesa:
 ⚠️ **NOTA IMPORTANTE**: Existe una discrepancia significativa entre los datos reportados y los disponibles en el sistema:
 
 - **Mesas Reportadas por ONPE**: 92,766
-- **Mesas Obtenidas del Dataset**: 88,064
-- **Diferencia**: **4,702 mesas faltantes** (5.07% del total reportado)
+- **Mesas Obtenidas del Dataset**: 92,731
+- **Actas Agregadas**: Se identificaron y agregaron más de **4,000 actas que comienzan con 9**
+- **Actas Pendientes**: **35 actas** aún por encontrar
 
 ### Preguntas Abiertas
 
 ¿Dónde están el resto de actas electorales? ¿Por qué no figuran en el sistema disponibilizado por la ONPE?
+¿Por que las actas que comienzan con 9 favores de una manera desproporcionada a Sanchez?
 
 **Ejemplo de Mesa Faltante:**
 
@@ -102,4 +104,7 @@ Este dataset es el resultado de la combinación de dos fuentes de datos:
 
 ## Contacto
 
-Para consultas, sugerencias o reportar errores, contáctate a: **devid_src@proton.me**
+Para consultas, sugerencias o reportar errores:
+
+- **Email**: devid_src@proton.me
+- **Twitter**: [@Sin_nombre_peru](https://twitter.com/Sin_nombre_peru)
